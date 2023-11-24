@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --darkest-bg: #0E1B2B;
+  --dark-bg: #152840;
+  --light-bg: #26456D;
+  --lightest-bg: #5A81B1;
+  --text: #769AC6;
+  --white: #fff;
+  --blue-accent: #30ACFF;
+  --green-accent: #44AD31;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--darkest-bg);
+}/*# sourceMappingURL=App.css.map */
