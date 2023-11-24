@@ -18,4 +18,8 @@
 body {
   font-family: "Montserrat", sans-serif;
   background-color: var(--darkest-bg);
+}
+
+.dump {
+  content: "";
 }/*# sourceMappingURL=App.css.map */
