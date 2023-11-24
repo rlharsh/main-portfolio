@@ -1,23 +1,45 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../assets/css/home.css';
 import Header from '../Header/Header';
 
 import { createClient } from 'contentful';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 
-export async function getStaticProps() {
-  const client = createClient({
-    space: import.meta.env.VITE_CONTENTFUL_SPACE_ID,
-    accessToken: import.meta.env.VITE_CONTENTFUL_ACCESS_KEY,
-  });
-
-
-
-}
+import { getInfoContent } from '../../api/contentfulHelper';
 
 const Home = () => {
+  const [aboutMe, setAboutMe] = useState([]);
+
+  const options = {
+    renderMark: {
+      [MARKS.BOLD]: text => <span className='bold'>{text}</span>
+    }
+  }
+
+  useEffect(() => {
+    async function getAbout() {
+      setAboutMe( await getInfoContent('6LvitSqJFQkVA4ha9jcZrW' ));
+    }
+   getAbout();
+  }, []);
+
   return (
     <div className='home-container'>
       <Header />
+
+      {
+        aboutMe &&
+          <section className='about-container'>
+            <h1>{ aboutMe.title }</h1>
+              <div className='about-container__body'>
+              {
+                documentToReactComponents( aboutMe.content, options )
+              }
+            </div>
+          </section>
+        }
+
     </div>
   )
 }
