@@ -12,7 +12,7 @@
 
     font-size: 1rem;
     color: var(--white);
-    line-height: 1.5rem;
+    line-height: 1.6rem;
 
     h1 {
         color: var(--blue-accent);
@@ -21,7 +21,9 @@
 
     &__body {
         background-color: var(--dark-bg);
-        padding: .4rem;
+        padding: 1rem;
+
+
     }
 }
 

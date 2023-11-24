@@ -11,7 +11,7 @@
   gap: 1rem;
   font-size: 1rem;
   color: var(--white);
-  line-height: 1.5rem;
+  line-height: 1.6rem;
 }
 .about-container h1 {
   color: var(--blue-accent);
@@ -19,7 +19,7 @@
 }
 .about-container__body {
   background-color: var(--dark-bg);
-  padding: 0.4rem;
+  padding: 1rem;
 }
 
 .bold {

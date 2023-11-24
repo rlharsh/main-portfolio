@@ -13,7 +13,13 @@ const Home = () => {
 
   const options = {
     renderMark: {
-      [MARKS.BOLD]: text => <span className='bold'>{text}</span>
+      [MARKS.BOLD]: text => <span className='bold'>{text}</span>,
+      [BLOCKS.PARAGRAPH]: (node, children) => node.content.replace('\n', '<br />')
+    },
+    renderText: text => {
+      return text.split('\n').reduce((children, textSegment, index) => {
+        return [...children, index > 0 && <br key={index} />, textSegment];
+      })
     }
   }
 
