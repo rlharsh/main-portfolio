@@ -6,6 +6,14 @@ import { createClient } from 'contentful';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 
+import imageCss from '../../assets/images/css.svg';
+import imageFirebase from '../../assets/images/firebase.svg';
+import imageGithub from '../../assets/images/github.svg';
+import imageHtml5 from '../../assets/images/html5.svg';
+import imageNetlify from '../../assets/images/netlify.svg';
+import imageReactjs from '../../assets/images/reactjs.svg';
+import imageVite from '../../assets/images/vitejs.svg';
+
 import { getInfoContent } from '../../api/contentfulHelper';
 
 const Home = () => {
@@ -34,6 +42,7 @@ const Home = () => {
     <div className='home-container'>
       <Header />
 
+      <>
       {
         aboutMe &&
           <section className='about-container'>
@@ -45,6 +54,36 @@ const Home = () => {
             </div>
           </section>
         }
+        </>
+
+        <section className="skills" id="skills">
+          <h2>Tech Stack</h2>
+          <div className="container">
+            <p>
+              Below are some of my preferred technical tools and languages. While I have a strong affinity for these skills, my passion for technology doesn't stop here. I'm always eager to embrace new challenges and expand my skillset. So if there's a technology or tool not listed here, I'm likely already excited about the opportunity to learn and master it!
+            </p>
+          </div>
+          <div className="skill-container">
+            <div className="skill">
+                <img src={imageCss} alt="" />
+              </div>
+              <div className="skill">
+                <img src={imageHtml5} alt="" />
+              </div>
+              <div className="skill">
+                <img src={imageVite} alt="" />
+              </div>
+              <div className="skill">
+                <img src={imageReactjs} alt="" />
+              </div>
+              <div className="skill">
+                <img src={imageGithub} alt="" />
+              </div>
+              <div className="skill">
+                <img src={imageFirebase} alt="" />
+              </div>
+          </div>
+        </section>
 
     </div>
   )
