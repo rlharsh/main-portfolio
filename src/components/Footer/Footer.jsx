@@ -4,7 +4,7 @@ import '../../assets/css/footer.css';
 
 const Footer = () => {
   return (
-    <footer>Footer</footer>
+    <footer>Footer Boy</footer>
   )
 }
 

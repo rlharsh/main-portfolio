@@ -56,6 +56,10 @@ const Home = () => {
         }
         </>
 
+        <section className="projects" id="projects">
+          <h2>Projects</h2>
+        </section>
+
         <section className="skills" id="skills">
           <h2>Tech Stack</h2>
           <div className="container">
@@ -83,6 +87,22 @@ const Home = () => {
                 <img src={imageFirebase} alt="" />
               </div>
           </div>
+        </section>
+
+        <section className="education" id="education">
+          <h2>Education</h2>
+        </section>
+
+        <section className="blog" id="blog">
+          <h2>Blog</h2>
+        </section>
+
+        <section className="contact" id="contact">
+          <h2>Contact</h2>
+        </section>
+
+        <section className="resume" id="resume">
+          <h2>Resume</h2>
         </section>
 
     </div>
