@@ -9,11 +9,14 @@ const Header = () => {
   return (
     <header className='app-header'>
         <div className="header-container">
-            <img src={ AvatarImage } alt="My wonderful little avatar!" />
             <div className="header-details">
-              <h1>Ronald Harsh</h1>
-              <h2>Front-End Developer</h2>
-              <p>I build things that change, for a changing world.</p>
+              <img src={AvatarImage} alt="" />
+              <div className='code-block'>
+                <h1>Hello, I'm <span className='accent'>Ronald</span>, Front-End Developer</h1>
+              </div>
+              <div className="code-block">
+                <p>I build things that change, for a changing world.</p>
+              </div>
             </div>
             <div className="social-container">
               <FontAwesomeIcon icon={faGithub} />

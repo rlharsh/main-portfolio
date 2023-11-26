@@ -7,7 +7,6 @@ import '../../assets/css/defaultlayout.css';
 const DefaultLayout = () => {
     return (
         <div className="app-container" id='app-contianer'>
-            <Navbar />
             <Outlet />
             <Footer />
         </div>
